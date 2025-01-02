@@ -1,0 +1,180 @@
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #2d2d2d;
+  color: #e0e0e0;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+}
+
+/* Typing Area */
+.typing-area {
+  background: #1e1e1e;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sentence-display {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #ffffff;
+  margin-bottom: 15px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-wrap: break-word;
+}
+
+.typing-box {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #333;
+  color: #ffffff;
+  outline: none;
+  resize: none;
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.stat-item {
+  text-align: center;
+  flex: 1;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #b0b0b0;
+}
+
+/* Buttons */
+.controls .btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  background: #4caf50;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.controls .btn.hidden {
+  display: none;
+}
+
+.controls .btn:hover {
+  background: #45a049;
+  transform: scale(1.05);
+}
+
+.controls .btn:active {
+  transform: scale(0.98);
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #b0b0b0;
+}
+
+/* Styling for the 30-second mode button */
+#timer-mode-btn {
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: #ff9800;
+  color: #fff;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+  margin-top: 15px;
+}
+
+#timer-mode-btn:hover {
+  background-color: #f57c00;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#timer-mode-btn:active {
+  transform: scale(0.98);
+}
+
+#timer-mode-btn:focus {
+  outline: none;
+}
+
+#timer-mode-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Style for the text */
+#timer-mode-label {
+  font-size: 1rem;
+  font-weight: normal;
+  color: #b0b0b0;
+  margin-right: 10px;
+}
+
+@keyframes fireEffect {
+  0% {
+      box-shadow: 0 0 10px rgba(255, 69, 0, 0.5), 0 0 20px rgba(255, 69, 0, 0.4);
+      transform: scale(1);
+  }
+  50% {
+      box-shadow: 0 0 15px rgba(255, 69, 0, 0.7), 0 0 30px rgba(255, 69, 0, 0.6);
+      transform: scale(1.05);
+  }
+  100% {
+      box-shadow: 0 0 10px rgba(255, 69, 0, 0.5), 0 0 20px rgba(255, 69, 0, 0.4);
+      transform: scale(1);
+  }
+}
+
+/* Fire effect applied to the 30-second mode button */
+.fire-on {
+  animation: fireEffect 1.5s infinite ease-in-out;
+  background-color: #ff4500; /* Slightly muted fire color */
+  color: #fff;
+  opacity: 0.8; /* Reduce opacity for less intense glow */
+}

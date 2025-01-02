@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Typing Test</h1>
+        </header>
+        <main>
+            <div class="typing-area">
+                <div id="sentence-display" class="sentence-display">
+                    Click "Start" to begin typing.
+                </div>
+                <textarea id="typing-box" class="typing-box" placeholder="Type here..." disabled></textarea>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <span id="wpm" class="stat-value">0</span>
+                    <span class="stat-label">WPM</span>
+                </div>
+                <div class="stat-item">
+                    <span id="accuracy" class="stat-value">0%</span>
+                    <span class="stat-label">Accuracy</span>
+                </div>
+                <div class="stat-item">
+                    <span id="time-elapsed" class="stat-value">0s</span>
+                    <span class="stat-label">Time</span>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="start-button" class="btn">Start</button>
+                <button id="done-button" class="btn hidden">Done</button>
+                <button id="reset-button" class="btn hidden">Reset</button>
+            </div>
+
+            <!-- 30-second mode toggle -->
+            <div id="timer-mode-btn-container">
+                <label id="timer-mode-label" for="timer-mode">
+                    <!-- <span>Enable 30 Second Mode:</span> -->
+                </label>
+                <button id="timer-mode-btn">
+                     Toggle 30 Second Mode
+                </button>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
